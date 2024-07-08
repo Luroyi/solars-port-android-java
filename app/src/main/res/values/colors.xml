@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <color name="blue_primary">#2196F3</color>
+    <color name="blue_dark">#3b5998</color>
+
+
+    <color name="green_primary">#4CAF50</color>
+    <color name="green_dark">#388E3C</color>
+
+
+    <color name="orange_primary">#FFA500</color>
+    <color name="orange_dark">#F57C00</color>
+
+
+    <color name="yellow_primary">#FFEB3B</color>
+    <color name="yellow_dark">#FBC02D</color>
+
+    <color name="gray_background">#F5F5F5</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="blue_pastel">#AEDFF7</color>
+
+    <color name="green_pastel">#C3E8A9</color>
+
+    <color name="orange_pastel">#FFD8A8</color>
+
+    <color name="yellow_pastel">#FFF9B0</color>
+
+    <color name="blue_pastel_light">#E0F7FA</color>
+
+    <color name="green_pastel_light">#E8F5E9</color>
+
+    <color name="orange_pastel_light">#FFE0B2</color>
+
+    <color name="yellow_pastel_light">#FFF9C4</color>
+
+    <color name="gray_light">#F5F5F5</color>
+
 </resources>

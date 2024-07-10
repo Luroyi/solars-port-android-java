@@ -50,5 +50,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button registerGoButton = findViewById(R.id.registrarse_button);
+        registerGoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/green_pastel_light"
-    android:padding="20dp"
-    tools:context=".MainActivity">
+    tools:context=".RegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/shape_rounded_background"
-        android:gravity="center_horizontal"
         android:orientation="vertical"
         android:padding="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,11 +25,29 @@
             app:srcCompat="@drawable/logo1" />
 
         <TextView
-            android:id="@+id/textViewEmailLabel"
+            android:id="@+id/textViewNameLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
-            android:layout_marginEnd="98dp"
+            android:layout_marginBottom="8dp"
+            android:text="Nombre:"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/nombre_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:hint="Nombre" />
+
+        <TextView
+            android:id="@+id/textViewEmailLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:text="Correo electrónico:"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
@@ -43,9 +57,8 @@
             android:id="@+id/usuario_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
+            android:layout_marginBottom="16dp"
             android:ems="10"
-            android:padding="12dp"
             android:inputType="textEmailAddress"
             android:hint="Email" />
 
@@ -54,8 +67,7 @@
             android:id="@+id/Password_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="122dp"
+            android:layout_marginBottom="8dp"
             android:text="Contraseña:"
             android:textColor="@android:color/black"
             android:textSize="16sp"
@@ -66,11 +78,30 @@
             android:id="@+id/contraseña_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="16dp"
             android:ems="10"
-            android:padding="12dp"
             android:inputType="textPassword"
             android:text="Contraseña" />
+
+        <TextView
+            android:id="@+id/Passwordre_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Repetir contraseña:"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/contraseñare_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:text="Repetir contraseña" />
 
         <TextView
             android:id="@+id/olvidaste_la_contraseña_textview"
@@ -79,29 +110,28 @@
             android:text="Olvidaste la contraseña"
             android:textColor="@android:color/holo_blue_light"
             android:textStyle="bold"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="80dp"
+            android:layout_marginBottom="8dp"
             android:clickable="true"
             android:linksClickable="true"
             android:padding="14dp"
             android:tooltipText="Clic para recuperar contraseña" />
 
-        <Button
-            android:id="@+id/iniciar_sesion_button"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:text="Ingresar"
-            android:textSize="18sp" />
 
         <Button
             android:id="@+id/registrarse_button"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
             android:text="Registrarse"
             android:textSize="18sp"/>
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/volver_button"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:text="Volver"
+            android:textSize="18sp"/>
 
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

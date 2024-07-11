@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/green_pastel_light"
     android:padding="20dp"
-    tools:context=".RecuperarContrasenaActivity">
+    tools:context=".RecoveryPassActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

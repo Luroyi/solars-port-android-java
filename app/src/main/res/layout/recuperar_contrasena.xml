@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_pastel_light"
+    android:padding="20dp"
+    tools:context=".RecuperarContrasenaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_rounded_background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+        android:id="@+id/logotipo"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="50dp"
+        app:srcCompat="@drawable/logo1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="310dp"
+            android:layout_height="85dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="Para restablecer su contraseña, ingrese su dirección de correo electrónico, por favor."
+            />
+
+        <EditText
+            android:id="@+id/email_editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginBottom="50dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:hint="Introduce el correo electrónico"/>
+
+        <Button
+            android:id="@+id/send_code_button"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:text="Enviar codigo"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/volver_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver"
+            android:textColor="@android:color/holo_blue_light"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:linksClickable="true"
+            android:padding="14dp"
+            android:textSize="18dp"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

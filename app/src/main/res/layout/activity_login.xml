@@ -21,19 +21,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <ImageView
             android:id="@+id/logotipo"
             android:layout_width="100dp"
             android:layout_height="85dp"
+            android:layout_marginBottom="40dp"
             android:layout_gravity="center_horizontal"
             app:srcCompat="@drawable/logo1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="60dp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/green_primary"
+            android:text="INICIO DE SESION"
+            android:textSize="18dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewEmailLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
             android:layout_marginEnd="85dp"
+            android:layout_marginBottom="7dp"
             android:fontFamily="@font/montserrat"
             android:text="Correo electrónico:"
             android:textColor="@android:color/black"
@@ -44,7 +58,7 @@
             android:id="@+id/usuario_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
+            android:layout_marginBottom="20dp"
             android:fontFamily="@font/montserrat"
             android:ems="10"
             android:padding="12dp"
@@ -56,7 +70,7 @@
             android:id="@+id/Password_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginBottom="7dp"
             android:layout_marginEnd="110dp"
             android:fontFamily="@font/montserrat"
             android:text="Contraseña:"
@@ -69,7 +83,7 @@
             android:id="@+id/contraseña_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
+            android:layout_marginBottom="20dp"
             android:fontFamily="@font/montserrat"
             android:minHeight="48dp"
             android:ems="10"
@@ -79,25 +93,26 @@
 
 
         <TextView
-            android:id="@+id/olvidaste_la_contraseña_textview"
+            android:id="@+id/forget_password_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Olvidaste la contraseña"
             android:textColor="@android:color/holo_blue_light"
             android:fontFamily="@font/montserrat"
             android:textStyle="bold"
-            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:layout_marginStart="80dp"
             android:clickable="true"
             android:linksClickable="true"
             android:padding="14dp"
-            android:tooltipText="Clic para recuperar contraseña" />
+            android:tooltipText="Clic para recuperar contraseña"
+            android:onClick="onForgetPasswordClicked" />
 
         <Button
             android:id="@+id/iniciar_sesion_button"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:fontFamily="@font/montserrat"
             android:text="Ingresar"
             android:textSize="18sp" />
@@ -106,7 +121,6 @@
             android:id="@+id/registrarse_button"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:layout_marginTop="20dp"
             android:fontFamily="@font/montserrat"
             android:text="Registrarse"
             android:textSize="18sp"/>

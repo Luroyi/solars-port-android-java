@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/green_pastel_light"
     android:padding="20dp"
-    tools:context=".RecuperarContrasenaActivity">
+    tools:context=".RecoveryPassActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,53 +20,76 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-        android:id="@+id/logotipo"
-        android:layout_width="100dp"
-        android:layout_height="85dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="50dp"
-        app:srcCompat="@drawable/logo1" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="310dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="25dp"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat"
+            android:text=" VERIFICA TU CORREO ELECTRONICO."
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="310dp"
-            android:layout_height="85dp"
+            android:layout_width="320dp"
+            android:layout_height="100dp"
             android:layout_marginBottom="50dp"
             android:gravity="center"
-            android:textSize="18sp"
-            android:text="Para restablecer su contraseña, ingrese su dirección de correo electrónico, por favor."
-            />
+            android:text="Acabamos de enviar un código a tu correo electrónico yin********************97@gmail.com"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp" />
+
 
         <EditText
-            android:id="@+id/email_editText2"
+            android:id="@+id/editTextNumberPassword2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="10dp"
             android:ems="10"
-            android:inputType="textEmailAddress"
-            android:hint="Introduce el correo electrónico"/>
+            android:inputType="numberPassword"
+            android:fontFamily="@font/montserrat"
+            android:hint="Ingresa el Codigó"/>
+
+        <TextView
+            android:id="@+id/reenviar_codigo_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reenciar Codigó"
+            android:textColor="@color/material_dynamic_tertiary0"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginBottom="25dp"
+            android:layout_marginStart="90dp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:linksClickable="true"
+            android:padding="14dp"
+            android:tooltipText="Clic para recuperar contraseña" />
+
 
         <Button
             android:id="@+id/send_code_button"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="20dp"
             android:text="Enviar codigo"
-            android:textSize="18sp"/>
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp"
+            />
 
         <TextView
             android:id="@+id/volver_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Volver"
-            android:textColor="@android:color/holo_blue_light"
+            android:textColor="@color/design_default_color_on_secondary"
             android:textStyle="bold"
             android:clickable="true"
             android:linksClickable="true"
             android:padding="14dp"
+            android:fontFamily="@font/montserrat"
             android:textSize="18dp"/>
 
 

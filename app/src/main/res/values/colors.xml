@@ -37,4 +37,6 @@
 
     <color name="gray_light">#F5F5F5</color>
 
+    <color name="color_primary">#3F51B5</color>
+
 </resources>

@@ -20,51 +20,71 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/logotipo"
-            android:layout_width="100dp"
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="310dp"
             android:layout_height="85dp"
-            android:layout_marginBottom="60dp"
-            android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/logo1" />
-
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="25dp"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat"
+            android:text=" VERIFICA TU CORREO ELECTRONICO."
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="310dp"
-            android:layout_height="85dp"
-            android:layout_marginBottom="60dp"
-            android:fontFamily="@font/montserrat"
+            android:layout_width="320dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="50dp"
             android:gravity="center"
-            android:text="Para restablecer su contraseña, ingrese su dirección de correo electrónico, por favor."
+            android:text="Acabamos de enviar un código a tu correo electrónico yin********************97@gmail.com"
+            android:fontFamily="@font/montserrat"
             android:textSize="18sp" />
 
+
         <EditText
-            android:id="@+id/email_editText2"
+            android:id="@+id/editTextNumberPassword2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="10dp"
             android:ems="10"
+            android:inputType="numberPassword"
             android:fontFamily="@font/montserrat"
-            android:inputType="textEmailAddress"
-            android:hint="Introduce el correo electrónico"/>
+            android:hint="Ingresa el Codigó"/>
+
+        <TextView
+            android:id="@+id/reenviar_codigo_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reenciar Codigó"
+            android:textColor="@color/material_dynamic_tertiary0"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginBottom="25dp"
+            android:layout_marginStart="90dp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:linksClickable="true"
+            android:padding="14dp"
+            android:tooltipText="Clic para recuperar contraseña" />
+
 
         <Button
             android:id="@+id/send_code_button"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="20dp"
             android:text="Enviar codigo"
             android:fontFamily="@font/montserrat"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            />
 
         <TextView
             android:id="@+id/volver_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Volver"
-            android:textColor="@android:color/holo_blue_light"
+            android:textColor="@color/design_default_color_on_secondary"
             android:textStyle="bold"
             android:clickable="true"
             android:linksClickable="true"

@@ -34,11 +34,19 @@ public class LoginActivity extends AppCompatActivity {
         contraseñaEditText = findViewById(R.id.contraseña_edittext);
 
         Button loginSubmitButton = findViewById(R.id.iniciar_sesion_button);
+        Button registerGoButton = findViewById(R.id.registrarse_button);
         loginSubmitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 validateInputs();
-                Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+
+            }
+        });
+
+        registerGoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
@@ -61,5 +69,8 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         Toast.makeText(this, "Iniciando sesión...", Toast.LENGTH_LONG).show();
+
+        Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+        startActivity(intent);
     }
 }

@@ -21,18 +21,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <ImageView
             android:id="@+id/logotipo"
             android:layout_width="100dp"
             android:layout_height="85dp"
+            android:layout_marginBottom="60dp"
             android:layout_gravity="center_horizontal"
             app:srcCompat="@drawable/logo1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="60dp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@android:color/holo_purple"
+            android:text="INICIO DE SESION"
+            android:textSize="18dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewEmailLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
             android:layout_marginEnd="85dp"
             android:fontFamily="@font/montserrat"
             android:text="Correo electrónico:"

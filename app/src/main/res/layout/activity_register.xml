@@ -24,10 +24,21 @@
             android:id="@+id/logotipo"
             android:layout_width="100dp"
             android:layout_height="85dp"
+            android:layout_marginBottom="60dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="70dp"
             app:srcCompat="@drawable/logo1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="60dp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@android:color/holo_purple"
+            android:text="CREAR CUENTA"
+            android:textSize="18dp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/nombre_edittext"
@@ -37,8 +48,7 @@
             android:ems="10"
             android:fontFamily="@font/montserrat"
             android:hint="Nombre"
-            android:inputType="textEmailAddress" />
-
+             />
 
         <EditText
             android:id="@+id/usuario_edittext"
@@ -47,12 +57,12 @@
             android:layout_marginBottom="16dp"
             android:ems="10"
             android:fontFamily="@font/montserrat"
-            android:hint="Email"
+            android:hint="Correo electronico"
             android:inputType="textEmailAddress" />
 
 
         <EditText
-            android:id="@+id/contraseña1_edittext"
+            android:id="@+id/contraseña_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"

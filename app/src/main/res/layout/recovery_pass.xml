@@ -24,6 +24,7 @@
             android:id="@+id/logotipo"
             android:layout_width="100dp"
             android:layout_height="85dp"
+            android:layout_marginTop="30dp"
             android:layout_marginBottom="60dp"
             android:layout_gravity="center_horizontal"
             app:srcCompat="@drawable/logo1" />
@@ -44,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="60dp"
             android:ems="10"
             android:fontFamily="@font/montserrat"
             android:inputType="textEmailAddress"
@@ -54,23 +55,11 @@
             android:id="@+id/send_code_button"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="16dp"
             android:text="Enviar codigo"
             android:fontFamily="@font/montserrat"
             android:textSize="18sp"/>
 
-        <TextView
-            android:id="@+id/volver_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Volver"
-            android:textColor="@android:color/holo_blue_light"
-            android:textStyle="bold"
-            android:clickable="true"
-            android:linksClickable="true"
-            android:padding="14dp"
-            android:fontFamily="@font/montserrat"
-            android:textSize="18dp"/>
+
 
 
     </LinearLayout>

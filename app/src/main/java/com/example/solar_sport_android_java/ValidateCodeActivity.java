@@ -1,6 +1,10 @@
 package com.example.solar_sport_android_java;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,7 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class ValidateCodeActivity extends AppCompatActivity {
-
+    private Button sendCodeButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,5 +24,21 @@ public class ValidateCodeActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        sendCodeButton = findViewById(R.id.send_code_button);
+
+        sendCodeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               //Codigo validar codigo
+            }
+
+        });
+    }
+    private void reSendRecoveryCode() {
+        String email = "yi********97@gmail.com";
+        Toast.makeText(this, "Reenviando código a " + email, Toast.LENGTH_LONG).show();
+        return;
     }
 }
+

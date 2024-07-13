@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">solar-sport-android-java</string>
+    <string name="title_activity_carousel_composable">CarouselComposable</string>
 </resources>

@@ -1,4 +1,23 @@
 <resources>
     <string name="app_name">solar-sport-android-java</string>
     <string name="title_activity_carousel_composable">CarouselComposable</string>
+
+    <string-array name="spinner_items">
+        <item>Enero</item>
+        <item>Febrero</item>
+        <item>Marzo</item>
+        <item>Abril</item>
+        <item>Mayo</item>
+        <item>Junio</item>
+        <item>Julio</item>
+        <item>Agosto</item>
+        <item>Septiembre</item>
+        <item>Octubre</item>
+        <item>Noviembre</item>
+        <item>Diciembre</item>
+        <item>Estadios</item>
+        <item>Pistas</item>
+        <item>Gimnasio</item>
+
+    </string-array>
 </resources>

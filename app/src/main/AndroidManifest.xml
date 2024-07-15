@@ -12,29 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Solarsportandroidjava"
         tools:targetApi="31">
-        <activity
-            android:name=".MainActivity2"
-            android:exported="false" />
+
         <activity
             android:name=".Registerterrace"
             android:exported="false" />
         <activity
-            android:name=".FormulariDeIncripcionActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CarouselComposable"
-            android:exported="false"
-            android:label="@string/title_activity_carousel_composable"
-            android:theme="@style/Theme.Solarsportandroidjava" />
-        <activity
             android:name=".DashboardActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ImagesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainScreenActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".CreatePasswordActivity"
             android:exported="false" />

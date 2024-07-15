@@ -1,14 +1,14 @@
 package com.example.solar_sport_android_java;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.MenuItem;
 
-import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.carousel.CarouselLayoutManager;
 import com.google.android.material.carousel.CarouselSnapHelper;
 import com.google.android.material.navigation.NavigationView;
@@ -18,56 +18,53 @@ import java.util.List;
 
 public class DashboardActivity extends AppCompatActivity {
 
-    private RecyclerView carouselRecyclerView;
-    private List<Integer> images = new ArrayList<>();
-
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        carouselRecyclerView = findViewById(R.id.carousel_recycler_view);
-        setupCarousel();
+        MaterialToolbar topAppBar = findViewById(R.id.topAppBar);
+        setSupportActionBar(topAppBar);
+        topAppBar.setOnMenuItemClickListener(this::onOptionsItemSelected);
+
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         setupDrawerContent(navigationView);
-
-
     }
 
-    private void setupCarousel() {
-        images.add(R.drawable.imagen1);
-        images.add(R.drawable.imagen2);
-        images.add(R.drawable.imagen3);
-        images.add(R.drawable.imagen4);
-        images.add(R.drawable.imagen5);
 
-        carouselRecyclerView.setLayoutManager(new CarouselLayoutManager());
-        CarouselAdapter adapter = new CarouselAdapter(this, images);
-        carouselRecyclerView.setAdapter(adapter);
-
-        CarouselSnapHelper snapHelper = new CarouselSnapHelper();
-        snapHelper.attachToRecyclerView(carouselRecyclerView);
-    }
 
     private void setupDrawerContent(NavigationView navigationView) {
         navigationView.setNavigationItemSelectedListener(menuItem -> {
             int itemId = menuItem.getItemId();
             if (itemId == R.id.nav_home) {
-                startActivity(new Intent(DashboardActivity.this, DashboardActivity.class));
+                // Manejar acción de inicio
             } else if (itemId == R.id.nav_profile) {
-                // Handle profile action
+                // Manejar acción de perfil
             } else if (itemId == R.id.nav_settings) {
-                // Handle settings action
+                // Manejar acción de configuración
             } else if (itemId == R.id.nav_logout) {
-                // Handle logout action
+                // Manejar acción de cierre de sesión
             }
             drawerLayout.closeDrawers();
             return true;
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.profile) {
+            // Manejar acción de perfil
+            return true;
+        } else if (id == R.id.logout) {
+            // Manejar acción de cierre de sesión
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

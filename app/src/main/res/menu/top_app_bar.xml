@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/profile"
+        android:title="Perfil"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:contentDescription=""
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/logout"
+        android:title="Cerrar sesión"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:contentDescription=""
+        app:showAsAction="never" />
+
+</menu>

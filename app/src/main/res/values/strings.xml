@@ -2,8 +2,17 @@
     <string name="app_name">solar-sport-android-java</string>
     <string name="title_activity_carousel_composable">CarouselComposable</string>
     <string name="solar_sport">Solar Sport</string>
+    <string name="ahorro_energia">Ahorro en facturas de electricidad</string>
+    <string name="optimizar_energia">Optimización del uso de energía</string>
+    <string name="incrementar_valor">Incremento del valor de la propiedad</string>
+    <string name="energia_limpia_renovable">Energía limpia y renovable</string>
+    <string name="baterias_almacenamiento">Baterías de almacenamiento</string>
+    <string name="monitoreo_regular">Monitoreo regular</string>
+    <string name="reduccion_huella_co2">Reducción de la huella de CO2</string>
+    <string name="Ampliación_del_sistema">Ampliación del sistema </string>
 
     <string-array name="spinner_items">
+        <item>Selecionar mes</item>
         <item>Enero</item>
         <item>Febrero</item>
         <item>Marzo</item>
@@ -16,6 +25,10 @@
         <item>Octubre</item>
         <item>Noviembre</item>
         <item>Diciembre</item>
+    </string-array>
+
+    <string-array name="spinner_item">
+        <item>Selecionar Categoria</item>
         <item>Estadios</item>
         <item>Pistas</item>
         <item>Gimnasio</item>

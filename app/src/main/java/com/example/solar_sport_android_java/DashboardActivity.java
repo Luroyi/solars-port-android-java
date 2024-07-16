@@ -1,25 +1,24 @@
 package com.example.solar_sport_android_java;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.carousel.CarouselLayoutManager;
-import com.google.android.material.carousel.CarouselSnapHelper;
 import com.google.android.material.navigation.NavigationView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class DashboardActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
+    private Button categoriesButton, statisticsButton, benefitsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,41 +29,63 @@ public class DashboardActivity extends AppCompatActivity {
         setSupportActionBar(topAppBar);
         topAppBar.setOnMenuItemClickListener(this::onOptionsItemSelected);
 
-
         drawerLayout = findViewById(R.id.drawer_layout);
-        navigationView = findViewById(R.id.nav_view);
-        setupDrawerContent(navigationView);
-    }
 
+        categoriesButton = findViewById(R.id.categorie_button);
+        statisticsButton = findViewById(R.id.statistic_button);
+        benefitsButton = findViewById(R.id.benefit_button);
 
-
-    private void setupDrawerContent(NavigationView navigationView) {
-        navigationView.setNavigationItemSelectedListener(menuItem -> {
-            int itemId = menuItem.getItemId();
-            if (itemId == R.id.nav_home) {
-                // Manejar acción de inicio
-            } else if (itemId == R.id.nav_profile) {
-                // Manejar acción de perfil
-            } else if (itemId == R.id.nav_settings) {
-                // Manejar acción de configuración
-            } else if (itemId == R.id.nav_logout) {
-                // Manejar acción de cierre de sesión
+        categoriesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openCategories();
             }
-            drawerLayout.closeDrawers();
-            return true;
+        });
+
+        statisticsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openStatistics();
+            }
+        });
+
+        benefitsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openBenefits();
+            }
         });
     }
-
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.profile) {
-            // Manejar acción de perfil
+
             return true;
         } else if (id == R.id.logout) {
-            // Manejar acción de cierre de sesión
+
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+    private void openCategories() {
+        Toast.makeText(this, "Open Categorie", Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(DashboardActivity.this, TerraceCategoriesActivity.class);
+        startActivity(intent);
+    }
+
+    private void openStatistics() {
+        Toast.makeText(this, "Open Statistic", Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(DashboardActivity.this, ProductionStatisticsActivity.class);
+        startActivity(intent);
+    }
+
+    private void openBenefits() {
+        Toast.makeText(this, "Open Benefit", Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(DashboardActivity.this, SolarEnergyBenefitsActivity.class);
+        startActivity(intent);
     }
 }

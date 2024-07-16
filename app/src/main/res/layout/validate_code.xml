@@ -50,13 +50,13 @@
             android:text="Ingresa el código" />
 
         <EditText
-            android:id="@+id/editTextNumberPassword2"
+            android:id="@+id/Código_TextNumberPassword2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
             android:layout_marginBottom="10dp"
             android:ems="10"
-            android:inputType="numberPassword"
+            android:inputType="number"
             android:fontFamily="@font/montserrat"
             android:hint="0    0    0    0    0    0"
             android:gravity="center"/>

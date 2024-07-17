@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_pastel_light"
+    android:padding="20dp"
+    tools:context=".Registerterrace">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_rounded_background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="60dp"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@android:color/holo_purple"
+            android:text="INGRESAR NUEVA TERRAZA"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/select_Category_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginBottom="25dp"
+            android:padding="16dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:entries="@array/spinner_items"/>
+
+        <EditText
+            android:id="@+id/terrace_code_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="Código terraza"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/amount_of_energy_produced_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="Cantidad de Energia Producida"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:id="@+id/Enter_the_saved_value_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:hint="Ingrese el valor ahorrado"
+            android:inputType="numberDecimal"/>
+
+        <Spinner
+            android:id="@+id/Select_month_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginBottom="20dp"
+            android:padding="16dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:entries="@array/spinner_items"/>
+
+        <Button
+            android:id="@+id/Register_terrace_button"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="30dp"
+            android:text="Registrar Terraza"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

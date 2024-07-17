@@ -30,7 +30,9 @@ public class ValidateCodeActivity extends AppCompatActivity {
         sendCodeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               //Codigo validar codigo
+
+                Intent intent = new Intent(ValidateCodeActivity.this, CreatePasswordActivity.class);
+                startActivity(intent);
             }
 
         });
@@ -39,6 +41,7 @@ public class ValidateCodeActivity extends AppCompatActivity {
         String email = "yi********97@gmail.com";
         Toast.makeText(this, "Reenviando código a " + email, Toast.LENGTH_LONG).show();
         return;
+
     }
 }
 

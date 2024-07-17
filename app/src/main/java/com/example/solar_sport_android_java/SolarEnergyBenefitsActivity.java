@@ -21,39 +21,9 @@ public class SolarEnergyBenefitsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.solar_energy_benefits);
 
-        ImageButton imageButton = findViewById(R.id.imageButton);
 
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showPopup(v);
-            }
-        });
-    }
-
-    private void showPopup(View anchorView) {
-        View popupView = LayoutInflater.from(this).inflate(R.layout.popup_window, null);
-
-        popupWindow = new PopupWindow(
-                popupView,
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                true // focusable
-        );
-
-        ImageView closeButton = popupView.findViewById(R.id.close_image);
-
-        closeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Dismiss the popup window
-                popupWindow.dismiss();
-            }
-        });
-
-        popupWindow.showAtLocation(anchorView, Gravity.CENTER, 0, 0);
-
-        Toast.makeText(SolarEnergyBenefitsActivity.this, "Popup mostrado", Toast.LENGTH_SHORT).show();
     }
 }
+
+
 

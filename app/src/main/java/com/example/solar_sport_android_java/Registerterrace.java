@@ -1,10 +1,15 @@
 package com.example.solar_sport_android_java;
 
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -15,6 +20,7 @@ public class Registerterrace extends AppCompatActivity {
     private Spinner categorySpinner, monthSpinner;
     private EditText terraceCodeEditText, energyProducedEditText, savedValueEditText;
     private Button registerButton;
+    private PopupWindow popupWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,14 +63,16 @@ public class Registerterrace extends AppCompatActivity {
 
 
                     String message = "Registrando Terraza... ";
-
                     Toast.makeText(Registerterrace.this, message, Toast.LENGTH_LONG).show();
+
+                    showPopup();
                 } else {
                     Toast.makeText(Registerterrace.this, "Por favor completa todos los campos", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
+
     private boolean validateInputs() {
         String terraceCode = terraceCodeEditText.getText().toString().trim();
         String energyProduced = energyProducedEditText.getText().toString().trim();
@@ -72,5 +80,29 @@ public class Registerterrace extends AppCompatActivity {
 
         return !terraceCode.isEmpty() && !energyProduced.isEmpty() && !savedValue.isEmpty();
     }
+    private void showPopup() {
+        View popupView = LayoutInflater.from(this).inflate(R.layout.popup_window, null);
+
+        popupWindow = new PopupWindow(
+                popupView,
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                true // focusable
+        );
+
+
+        ImageView closeButton = popupView.findViewById(R.id.close_image);
+        closeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                popupWindow.dismiss();
+            }
+        });
+
+        popupWindow.showAtLocation(findViewById(R.id.main), Gravity.CENTER, 0, 0);
+
+        Toast.makeText(Registerterrace.this, "Popup mostrado", Toast.LENGTH_SHORT).show();
+    }
 }
+
 

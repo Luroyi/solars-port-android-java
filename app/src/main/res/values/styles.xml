@@ -2,8 +2,8 @@
 <resources>
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/green_pastel_light</item>
-        <item name="colorPrimaryDark">@color/green_dark</item>
-        <item name="colorAccent">@color/green_primary</item>
+        <item name="colorPrimaryDark">@color/green_pastel_light</item>
+        <item name="colorAccent">@color/green_pastel_light</item>
         <item name="popupTheme">@style/AppTheme.PopupOverlay</item>
     </style>
 

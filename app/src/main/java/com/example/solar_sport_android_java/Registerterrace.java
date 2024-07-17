@@ -1,8 +1,10 @@
 package com.example.solar_sport_android_java;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -13,7 +15,11 @@ import android.widget.PopupWindow;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.google.android.material.appbar.MaterialToolbar;
 
 public class Registerterrace extends AppCompatActivity {
 
@@ -21,6 +27,9 @@ public class Registerterrace extends AppCompatActivity {
     private EditText terraceCodeEditText, energyProducedEditText, savedValueEditText;
     private Button registerButton;
     private PopupWindow popupWindow;
+
+    private DrawerLayout drawerLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +47,12 @@ public class Registerterrace extends AppCompatActivity {
                 R.array.spinner_items, android.R.layout.simple_spinner_item);
         monthAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         monthSpinner.setAdapter(monthAdapter);
+
+        MaterialToolbar topAppBar = findViewById(R.id.topAppBar);
+        setSupportActionBar(topAppBar);
+        topAppBar.setOnMenuItemClickListener(this::onOptionsItemSelected);
+
+        drawerLayout = findViewById(R.id.drawer_layout);
 
         terraceCodeEditText = findViewById(R.id.terrace_code_edittext);
         energyProducedEditText = findViewById(R.id.amount_of_energy_produced_edittext);
@@ -64,8 +79,9 @@ public class Registerterrace extends AppCompatActivity {
 
                     String message = "Registrando Terraza... ";
                     Toast.makeText(Registerterrace.this, message, Toast.LENGTH_LONG).show();
-
-                    showPopup();
+                    Intent intent = new Intent(Registerterrace.this, ProductionStatisticsActivity.class);
+                    startActivity(intent);
+                    //showPopup();
                 } else {
                     Toast.makeText(Registerterrace.this, "Por favor completa todos los campos", Toast.LENGTH_SHORT).show();
                 }
@@ -102,6 +118,19 @@ public class Registerterrace extends AppCompatActivity {
         popupWindow.showAtLocation(findViewById(R.id.main), Gravity.CENTER, 0, 0);
 
         Toast.makeText(Registerterrace.this, "Popup mostrado", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.profile) {
+
+            return true;
+        } else if (id == R.id.logout) {
+
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
 

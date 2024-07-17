@@ -23,7 +23,7 @@ public class Registerterrace extends AppCompatActivity {
 
         categorySpinner = findViewById(R.id.select_Category_spinner);
         ArrayAdapter<CharSequence> categoryAdapter = ArrayAdapter.createFromResource(this,
-                R.array.spinner_items, android.R.layout.simple_spinner_item);
+                R.array.spinner_item, android.R.layout.simple_spinner_item);
         categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         categorySpinner.setAdapter(categoryAdapter);
 
@@ -56,11 +56,7 @@ public class Registerterrace extends AppCompatActivity {
 
 
 
-                    String message = "Categoría seleccionada: " + selectedCategory + "\n" +
-                            "Mes seleccionado: " + selectedMonth + "\n" +
-                            "Código de terraza: " + terraceCode + "\n" +
-                            "Energía producida: " + energyProduced + "\n" +
-                            "Valor ahorrado: " + savedValue;
+                    String message = "Registrando Terraza... ";
 
                     Toast.makeText(Registerterrace.this, message, Toast.LENGTH_LONG).show();
                 } else {

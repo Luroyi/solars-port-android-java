@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="50dp"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/close_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:contentDescription="Cerrar"
+        android:onClick="closePopup"
+        android:layout_gravity="end"/>
+
+    <TextView
+        android:id="@+id/popup_text"
+        android:layout_width="392dp"
+        android:layout_height="319dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="25dp"
+        android:background="#BCECE8"
+        android:backgroundTint="#CEF7F8"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="La energía generada por los paneles solares reduce la cantidad de electricidad que necesitas comprar de la red."
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

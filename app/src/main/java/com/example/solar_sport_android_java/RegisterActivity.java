@@ -18,8 +18,8 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText usuario_edittext;
     private EditText nombre_edittext;
     private EditText contraseña_edittext;
-
     private EditText contraseñare_edittext;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,8 +56,13 @@ public class RegisterActivity extends AppCompatActivity {
             nombre_edittext.requestFocus();
             return;
         }
+
         if (email.isEmpty()) {
             usuario_edittext.setError("Correo electrónico requerido");
+            usuario_edittext.requestFocus();
+            return;
+        } else if (!isValidEmail(email)) {
+            usuario_edittext.setError("Correo electrónico no válido");
             usuario_edittext.requestFocus();
             return;
         }
@@ -66,16 +71,38 @@ public class RegisterActivity extends AppCompatActivity {
             contraseña_edittext.setError("Contraseña requerida");
             contraseña_edittext.requestFocus();
             return;
+        } else if (!isValidPassword(password)) {
+            contraseña_edittext.setError("La contraseña debe tener al menos 6 caracteres");
+            contraseña_edittext.requestFocus();
+            return;
         }
 
         if (password_re.isEmpty()) {
             contraseñare_edittext.setError("Repetir contraseña requerida");
             contraseñare_edittext.requestFocus();
             return;
+        } else if (!isValidPassword(password_re)) {
+            contraseñare_edittext.setError("La contraseña debe tener al menos 6 caracteres");
+            contraseñare_edittext.requestFocus();
+            return;
+        }
+
+        if (!password.equals(password_re)) {
+            contraseñare_edittext.setError("Las contraseñas no coinciden");
+            contraseñare_edittext.requestFocus();
+            return;
         }
 
         Toast.makeText(this, "Registrando...", Toast.LENGTH_LONG).show();
-        Intent intent = new Intent(RegisterActivity.this, DashboardActivity.class);
+        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
         startActivity(intent);
+    }
+
+    private boolean isValidEmail(String target) {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
+    }
+
+    private boolean isValidPassword(String password) {
+        return password.length() >= 6;
     }
 }

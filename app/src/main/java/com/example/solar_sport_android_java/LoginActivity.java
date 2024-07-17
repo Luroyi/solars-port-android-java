@@ -69,6 +69,10 @@ public class LoginActivity extends AppCompatActivity {
             usuarioEditText.setError("Correo electrónico requerido");
             usuarioEditText.requestFocus();
             return;
+        } else if (!isValidEmail(email)) {
+            usuarioEditText.setError("Correo electrónico no válido");
+            usuarioEditText.requestFocus();
+            return;
         }
 
         if (password.isEmpty()) {
@@ -76,10 +80,25 @@ public class LoginActivity extends AppCompatActivity {
             contraseñaEditText.requestFocus();
             return;
         }
+        else if (!isValidPassword(password)) {
+        contraseñaEditText.setError("La contraseña debe tener al menos 6 caracteres");
+        contraseñaEditText.requestFocus();
+        return;
+
+        }
 
         Toast.makeText(this, "Iniciando sesión...", Toast.LENGTH_LONG).show();
 
         Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
         startActivity(intent);
     }
+    private boolean isValidEmail(String target) {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
+
+    }
+    private boolean isValidPassword(String password){
+        return password.length()>= 6;
+
+    }
 }
+

@@ -38,7 +38,7 @@
                         android:textStyle="bold"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
                         android:layout_marginStart="8dp"
                         android:layout_marginEnd="8dp"/>
 
@@ -61,16 +61,25 @@
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="260dp"
+            android:layout_height="663dp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/shape_rounded_background"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="16dp"
             app:layout_anchor="@+id/linearLayout"
             app:layout_anchorGravity="center">
 
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp"
+                app:srcCompat="@drawable/paneles" />
+
             <Button
-                android:id="@+id/categories_button"
+                android:id="@+id/categorie_button"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:layout_margin="10dp"
@@ -81,10 +90,10 @@
                 android:textColor="@color/cardview_dark_background"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:backgroundTint="@color/orange_pastel_light" />
+                app:backgroundTint="@color/light_yellow" />
 
             <Button
-                android:id="@+id/statistics_button"
+                android:id="@+id/statistic_button"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:layout_margin="10dp"
@@ -99,7 +108,7 @@
 
 
             <Button
-                android:id="@+id/benefits_button"
+                android:id="@+id/benefit_button"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:layout_margin="10dp"
@@ -110,29 +119,11 @@
                 android:textColor="@color/cardview_dark_background"
                 android:textSize="20dp"
                 android:textStyle="bold"
-                app:backgroundTint="@color/yellow_pastel" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="411dp"
-                android:layout_height="57dp"
-                android:layout_marginTop="60dp"
-                android:fontFamily="@font/montserrat"
-                android:gravity="center"
-                android:text="Todos los derechos son reservados"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                app:backgroundTint="@color/pastel_lavender" />
 
         </LinearLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:menu="@menu/menu_drawer" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
 

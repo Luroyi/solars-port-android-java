@@ -38,7 +38,7 @@
             android:layout_gravity="center"
             android:layout_marginBottom="60dp"
             android:fontFamily="@font/montserrat"
-            android:textColor="@color/green_primary"
+            android:textColor="@android:color/holo_purple"
             android:text="INICIO DE SESION"
             android:textSize="18dp"
             android:textStyle="bold" />

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">solar-sport-android-java</string>
     <string name="title_activity_carousel_composable">CarouselComposable</string>
+    <string name="solar_sport">Solar Sport</string>
 
     <string-array name="spinner_items">
         <item>Enero</item>

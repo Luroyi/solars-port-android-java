@@ -403,6 +403,8 @@ tools:context=".ProductionStatisticsActivity">
 
         </TableLayout>
 
+
+
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.drawerlayout.widget.DrawerLayout>

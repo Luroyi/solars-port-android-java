@@ -38,7 +38,8 @@
             android:fontFamily="@font/montserrat"
             android:gravity="center"
             android:text="Para restablecer su contraseña, ingrese su dirección de correo electrónico, por favor."
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="@color/cardview_dark_background"/>
 
         <EditText
             android:id="@+id/email_EditText"
@@ -49,7 +50,8 @@
             android:ems="10"
             android:fontFamily="@font/montserrat"
             android:inputType="textEmailAddress"
-            android:hint="Introduce el correo electrónico"/>
+            android:hint="Introduce el correo electrónico"
+            android:textColorHint="@color/material_dynamic_neutral60"/>
 
         <Button
             android:id="@+id/send_code_button"

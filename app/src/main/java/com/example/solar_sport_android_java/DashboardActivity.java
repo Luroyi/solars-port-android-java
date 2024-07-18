@@ -69,21 +69,21 @@ public class DashboardActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     private void openCategories() {
-        Toast.makeText(this, "Open Categorie", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Abriendo Categorias", Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(DashboardActivity.this, TerraceCategoriesActivity.class);
         startActivity(intent);
     }
 
     private void openStatistics() {
-        Toast.makeText(this, "Open Statistic", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Abriendo Estadisticas", Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(DashboardActivity.this, ProductionStatisticsActivity.class);
         startActivity(intent);
     }
 
     private void openBenefits() {
-        Toast.makeText(this, "Open Benefit", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Abriendo Beneficios ", Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(DashboardActivity.this, SolarEnergyBenefitsActivity.class);
         startActivity(intent);

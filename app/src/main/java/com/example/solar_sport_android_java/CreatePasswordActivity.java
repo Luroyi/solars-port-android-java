@@ -55,7 +55,7 @@ public class CreatePasswordActivity extends AppCompatActivity {
             return;
         }
 
-        Toast.makeText(this, "Iniciando sesión...", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Contraseña creada ...", Toast.LENGTH_LONG).show();
 
         Intent intent = new Intent(CreatePasswordActivity.this, LoginActivity.class);
         startActivity(intent);

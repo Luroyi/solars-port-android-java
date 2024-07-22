@@ -72,14 +72,14 @@ public class TerraceCategoriesActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.profile) {
-            // Handle profile action
+
             Toast.makeText(this, "Perfil seleccionado", Toast.LENGTH_SHORT).show();
-            // Aquí puedes añadir el intent para navegar a la actividad de perfil si existe
+
             return true;
         } else if (id == R.id.logout) {
-            // Handle logout action
+
             Toast.makeText(this, "Cerrar sesión seleccionado", Toast.LENGTH_SHORT).show();
-            // Aquí puedes añadir el intent para navegar a la actividad de logout si existe
+
             return true;
         }
         return super.onOptionsItemSelected(item);

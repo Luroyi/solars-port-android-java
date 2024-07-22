@@ -18,6 +18,16 @@ public class PopupWindowActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.popup_window);
 
+        Button continuar_Button =findViewById(R.id.continuar_button);
+
+        continuar_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PopupWindowActivity.this, ProductionStatisticsActivity.class);
+
+            }
+        });
+
 
     }
 }

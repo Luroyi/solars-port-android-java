@@ -79,7 +79,7 @@ public class Registerterrace extends AppCompatActivity {
 
                     String message = "Registrando Terraza... ";
                     Toast.makeText(Registerterrace.this, message, Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(Registerterrace.this, ProductionStatisticsActivity.class);
+                    Intent intent = new Intent(Registerterrace.this, PopupWindowActivity.class);
                     startActivity(intent);
                     //showPopup();
                 } else {

@@ -21,7 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
         <ImageView
             android:id="@+id/logotipo"
             android:layout_width="100dp"
@@ -64,6 +63,7 @@
             android:ems="10"
             android:padding="12dp"
             android:inputType="textEmailAddress"
+            android:textColorHint="@color/material_dynamic_neutral60"
             android:hint="Email" />
 
 
@@ -90,7 +90,8 @@
             android:ems="10"
             android:padding="12dp"
             android:inputType="textPassword"
-            android:hint="Contraseña"/>
+            android:hint="Contraseña"
+            android:textColorHint="@color/material_dynamic_neutral60"/>
 
 
         <TextView

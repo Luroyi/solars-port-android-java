@@ -40,6 +40,7 @@
             android:gravity="center"
             android:text="Acabamos de enviar un código a tu correo electrónico yin********************97@gmail.com. Por favor ingresa el Código a continuación"
             android:fontFamily="@font/montserrat"
+            android:textColor="@color/cardview_dark_background"
             android:textSize="18sp" />
 
 
@@ -59,7 +60,8 @@
             android:inputType="number"
             android:fontFamily="@font/montserrat"
             android:hint="0    0    0    0    0    0"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:textColorHint="@color/material_dynamic_neutral60"/>
 
         <TextView
             android:id="@+id/reenviar_codigo_textview"
@@ -76,8 +78,6 @@
             android:padding="14dp"
             android:tooltipText="Clic para recuperar contraseña"
             android:onClick="onRheSendRecoveryCode"/>
-
-
 
         <Button
             android:id="@+id/send_code_button"

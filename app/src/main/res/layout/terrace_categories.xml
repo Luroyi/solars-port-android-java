@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green_pastel_light"
+    android:padding="8dp"
     tools:context=".TerraceCategoriesActivity">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -60,14 +61,15 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
+
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="55dp"
             android:background="@color/white"
             android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:layout_marginTop="55dp"
             android:padding="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -78,15 +80,15 @@
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="60dp"
+                android:layout_marginBottom="120dp"
                 app:srcCompat="@drawable/estadio" />
-
 
             <Button
                 android:id="@+id/stadiums_button"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
-                android:layout_margin="10dp"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/button_background_rectangular"
                 android:fontFamily="@font/montserrat"
                 android:gravity="center"
@@ -100,7 +102,8 @@
                 android:id="@+id/gym_button"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
-                android:layout_margin="10dp"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/button_background_rectangular"
                 android:fontFamily="@font/montserrat"
                 android:gravity="center"
@@ -114,7 +117,7 @@
                 android:id="@+id/sports_courts_button"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
-                android:layout_margin="10dp"
+                android:layout_margin="15dp"
                 android:background="@drawable/button_background_rectangular"
                 android:fontFamily="@font/montserrat"
                 android:gravity="center"
